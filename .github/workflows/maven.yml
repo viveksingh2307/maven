@@ -28,7 +28,7 @@ jobs:
       - name: build and push image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: viveksingh2307/spring-cicd-image
+          image: vsingh0709/spring-cicd-image
           tags: latest
           registry: docker.io
           dockerfile: Dockerfile
