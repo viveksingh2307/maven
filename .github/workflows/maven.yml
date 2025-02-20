@@ -25,15 +25,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Run Tests
-        run: mvn test
-
-      - name: Upload JAR Artifact
-        uses: actions/upload-artifact@v3
+      - name: build and push image
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: viveksingh2307/spring-cicd-image
-          name: spring-boot-app
-          path: target/*.jar
+          tags: latest
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{secrets.DOCKER_USERNAME}}
