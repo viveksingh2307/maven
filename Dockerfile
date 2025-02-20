@@ -1,4 +1,4 @@
-FROM openjdk:17.0.0-jdk-slim
+FROM openjdk:17-jdk-slim
 EXPOSE 8080
 ARG JAR_FILE=target/*.jar
 
